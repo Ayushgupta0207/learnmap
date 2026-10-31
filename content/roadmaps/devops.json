@@ -1,0 +1,104 @@
+{
+  "slug": "devops",
+  "title": "DevOps",
+  "description": "A step-by-step path to learn DevOps: Linux, Git, Docker, CI/CD and Kubernetes, with the best free resources for each step.",
+  "category": "devops",
+  "kind": "role",
+  "updatedAt": "2026-10-31",
+  "intro": [
+    "DevOps brings the people who build software and the people who run it closer together, so that new features reach users faster and with fewer surprises.",
+    "This roadmap lists the skills in the order that makes learning easiest. For each topic you get a short list of resources, with a reason why each one is worth your time."
+  ],
+  "faq": [
+    {
+      "question": "Do I need to know programming to start DevOps?",
+      "answer": "Basic scripting helps a lot, but you can begin with Linux and Git first and learn scripting along the way."
+    },
+    {
+      "question": "How long does it take to learn DevOps?",
+      "answer": "Most beginners need several months of steady practice to cover the basics. Building small projects speeds this up."
+    }
+  ],
+  "topics": [
+    {
+      "id": "linux",
+      "title": "Linux Basics",
+      "summary": "The command line, files and permissions, processes and basic networking.",
+      "after": [],
+      "resources": [
+        {
+          "title": "Linux Journey",
+          "url": "https://linuxjourney.com/",
+          "type": "article",
+          "level": "beginner",
+          "free": true,
+          "why": "Short, structured lessons that start from zero and build up gently."
+        }
+      ]
+    },
+    {
+      "id": "git",
+      "title": "Git and GitHub",
+      "summary": "Version control, branches, pull requests and working with a team.",
+      "after": ["linux"],
+      "resources": [
+        {
+          "title": "Pro Git Book",
+          "url": "https://git-scm.com/book/en/v2",
+          "type": "book",
+          "level": "beginner",
+          "free": true,
+          "why": "The official book, free online, and clear about how Git really works."
+        }
+      ]
+    },
+    {
+      "id": "docker",
+      "title": "Docker",
+      "summary": "Packaging an application into a container that runs the same everywhere.",
+      "after": ["git"],
+      "resources": [
+        {
+          "title": "Docker Get Started",
+          "url": "https://docs.docker.com/get-started/",
+          "type": "doc",
+          "level": "beginner",
+          "free": true,
+          "why": "The official guide, always current, with hands-on steps."
+        }
+      ]
+    },
+    {
+      "id": "ci-cd",
+      "title": "CI/CD",
+      "summary": "Automatically testing and releasing code every time it changes.",
+      "after": ["docker"],
+      "resources": [
+        {
+          "title": "GitHub Actions Documentation",
+          "url": "https://docs.github.com/en/actions",
+          "type": "doc",
+          "level": "beginner",
+          "free": true,
+          "why": "A free, widely used tool, and the docs include ready-made examples."
+        }
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "title": "Kubernetes",
+      "summary": "Running and scaling many containers across several machines.",
+      "after": ["docker"],
+      "resources": [
+        {
+          "title": "Kubernetes Basics Tutorial",
+          "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+          "type": "doc",
+          "level": "intermediate",
+          "free": true,
+          "why": "Official interactive tutorial that explains the core ideas in order."
+        }
+      ]
+    }
+  ]
+}
