@@ -17,9 +17,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const roadmap = getRoadmap(slug);
   if (!roadmap) return {};
+
+  const title = `${roadmap.title} Roadmap: Step-by-Step Learning Path`;
+  const path = `/roadmaps/${roadmap.slug}`;
+
   return {
-    title: `${roadmap.title} Roadmap`,
+    title,
     description: roadmap.description,
+    alternates: { canonical: path },
+    openGraph: {
+      title,
+      description: roadmap.description,
+      url: path,
+      type: "article",
+      modifiedTime: roadmap.updatedAt,
+    },
   };
 }
 
