@@ -99,6 +99,22 @@
           "why": "Official interactive tutorial that explains the core ideas in order."
         }
       ]
+    },
+    {
+      "id": "terraform",
+      "title": "Infrastructure as Code",
+      "summary": "Describing servers and cloud resources in files so they can be created automatically.",
+      "after": ["docker"],
+      "resources": [
+        {
+          "title": "Terraform Tutorials",
+          "url": "https://developer.hashicorp.com/terraform/tutorials",
+          "type": "doc",
+          "level": "intermediate",
+          "free": true,
+          "why": "Official hands-on tutorials that start with the basics."
+        }
+      ]
     }
   ]
 }

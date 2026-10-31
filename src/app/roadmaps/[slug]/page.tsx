@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllRoadmaps, getRoadmap } from "@/app/lib/roadmaps";
+import RoadmapGraph from "@/components/RoadmapGraph";
+import { computeLayout } from "@/app/lib/graphLayout";
 
 export const dynamicParams = false;
 
@@ -25,6 +27,10 @@ export default async function RoadmapPage({ params }: Props) {
   const { slug } = await params;
   const roadmap = getRoadmap(slug);
   if (!roadmap) notFound();
+    const positions = computeLayout(roadmap.topics);
+          {roadmap.intro.map((p, i) => (
+        <p key={i} className="mt-4">{p}</p>
+      ))}
 
   return (
     <main className="mx-auto max-w-3xl p-6">
@@ -36,7 +42,7 @@ export default async function RoadmapPage({ params }: Props) {
       {roadmap.intro.map((p, i) => (
         <p key={i} className="mt-4">{p}</p>
       ))}
-
+      <RoadmapGraph topics={roadmap.topics} positions={positions} />
       <h2 className="mt-10 text-2xl font-semibold">Topics to learn</h2>
       <ol className="mt-4 space-y-8">
         {roadmap.topics.map((t) => (
